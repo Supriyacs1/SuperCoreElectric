@@ -1,160 +1,454 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Core Electric Co. | Professional Electrical Services</title>
-    <!-- Bootstrap CSS for mobile-friendly layout -->
+
+    <title>Super Core Electric Co. | Electrical Engineering</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         :root {
-            --navy-blue: #0F2027;
-            --cyan: #203A43;
-            --bright-cyan: #00d2ff;
+            --navy: #0F2027;
+            --cyan: #00d2ff;
+            --dark-cyan: #203A43;
         }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            color: #333; 
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
         }
-        .hero { 
-            background: linear-gradient(135deg, var(--navy-blue), var(--cyan)); 
-            color: white; 
-            padding: 100px 0; 
-            text-align: center; 
+
+        .navbar {
+            background: var(--navy);
         }
-        .btn-custom { 
-            background-color: var(--bright-cyan); 
-            color: var(--navy-blue); 
-            font-weight: bold; 
+
+        .brand-logo {
+            height: 55px;
+            width: auto;
+            background: white;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy), var(--dark-cyan));
+            color: white;
+            padding: 110px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-weight: 800;
+        }
+
+        .btn-custom {
+            background: var(--cyan);
+            color: var(--navy);
+            font-weight: bold;
             border: none;
-            transition: all 0.3s ease;
+            padding: 13px 28px;
         }
+
         .btn-custom:hover {
-            background-color: #00b4db;
+            background: #00b4db;
             color: white;
         }
-        .team-card { 
-            border: 1px solid #eef2f3; 
-            border-radius: 12px; 
-            padding: 25px; 
-            text-align: center; 
-            margin-bottom: 24px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
-            transition: transform 0.2s ease;
+
+        .section-title {
+            font-weight: 800;
+            color: var(--navy);
         }
-        .team-card:hover {
-            transform: translateY(-5px);
+
+        .service-card {
+            background: white;
+            border: 1px solid #e7eef1;
+            border-radius: 12px;
+            padding: 28px 20px;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
-        .footer { 
-            background-color: var(--navy-blue); 
-            color: white; 
-            padding: 25px 0; 
-            font-size: 14px; 
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.12);
         }
-        .icon-banner {
-            font-size: 2.5rem;
-            color: var(--bright-cyan);
+
+        .service-icon {
+            font-size: 40px;
             margin-bottom: 15px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            height: 100%;
+            border-bottom: 4px solid var(--cyan);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .team-card h5 {
+            font-weight: bold;
+            color: var(--navy);
+        }
+
+        .team-role {
+            color: #008bb0;
+            font-weight: 600;
+        }
+
+        .about-section {
+            background: #f3f8fa;
+        }
+
+        .contact-card {
+            max-width: 550px;
+            margin: auto;
+            border-radius: 12px;
+        }
+
+        footer {
+            background: var(--navy);
+            color: white;
+            padding: 25px 0;
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Header Navigation -->
-    <nav class="navbar navbar-dark bg-dark py-3">
-        <div class="container justify-content-between">
-            <span class="navbar-brand mb-0 h1 fw-bold tracking-wide">⚡ SUPER CORE ELECTRIC CO.</span>
-            <a href="#contact" class="btn btn-outline-light btn-sm">Get in Touch</a>
-        </div>
-    </nav>
+<!-- NAVIGATION -->
+<nav class="navbar navbar-dark navbar-expand-lg py-3">
+    <div class="container">
 
-    <!-- Hero Section -->
-    <header class="hero d-flex align-items-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-3">Powering Your Innovation Safely</h1>
-            <p class="lead mb-4">Premium Commercial & Residential Electrical Engineering Solutions</p>
-            <a href="#contact" class="btn btn-custom btn-lg px-4 shadow-sm">Get a Free Quote</a>
-        </div>
-    </header>
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="logo.png"
+                 alt="Super Core Electric Co. Logo"
+                 class="brand-logo">
 
-    <!-- Services Section -->
-    <section class="container my-5 py-4">
-        <h2 class="text-center mb-5 fw-bold">Our Core Expertise</h2>
-        <div class="row g-4 text-center">
-            <div class="col-md-4">
-                <div class="p-3">
-                    <div class="icon-banner">⚙️</div>
-                    <h4 class="fw-bold">Industrial Wiring</h4>
-                    <p class="text-muted">Heavy duty power grids, core electrical steel installations, and comprehensive plant wiring upgrades.</p>
+            <span>SUPER CORE ELECTRIC CO.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- HERO SECTION -->
+<header class="hero" id="home">
+    <div class="container">
+
+        <h1 class="display-4 mb-3">
+            Powering Your Innovation Safely
+        </h1>
+
+        <p class="lead mb-4">
+            Professional Electrical Engineering, Testing,
+            Commissioning & Industrial Solutions.
+        </p>
+
+        <p>
+            Reliable Solutions. Professional Service.
+            Electrical Excellence.
+        </p>
+
+        <a href="#contact" class="btn btn-custom btn-lg mt-3">
+            Get a Free Quote
+        </a>
+
+    </div>
+</header>
+
+
+<!-- ABOUT COMPANY -->
+<section class="about-section py-5">
+    <div class="container text-center">
+
+        <h2 class="section-title mb-4">
+            About Super Core Electric Co.
+        </h2>
+
+        <p class="lead">
+            Super Core Electric Co. provides professional
+            electrical engineering solutions for industrial
+            and commercial applications.
+        </p>
+
+        <p class="text-muted">
+            We specialize in electrical testing, VCB servicing,
+            relay protection, CT & PT services, starter panels,
+            distribution systems and industrial electrical
+            maintenance. Our focus is on safety, reliability,
+            quality workmanship and customer satisfaction.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- SERVICES SECTION -->
+<section class="container py-5" id="services">
+
+    <div class="text-center mb-5">
+        <h2 class="section-title">Our Core Expertise</h2>
+        <p class="text-muted">
+            Complete Electrical Engineering & Industrial Services
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4 col-sm-6">
+            <div class="service-card text-center">
+                <div class="service-icon">⚙️</div>
+                <h5>Industrial Wiring</h5>
+                <p class="text-muted">
+                    Industrial power wiring, electrical installations
+                    and plant electrical maintenance.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="service-card text-center">
+                <div class="service-icon">🔌</div>
+                <h5>VCB Testing & Service</h5>
+                <p class="text-muted">
+                    Vacuum Circuit Breaker testing, inspection,
+                    servicing and maintenance.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="service-card text-center">
+                <div class="service-icon">🎛️</div>
+                <h5>Relay Setting & Coordination</h5>
+                <p class="text-muted">
+                    Protection relay setting, testing and
+                    coordination services for electrical systems.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="service-card text-center">
+                <div class="service-icon">⚡</div>
+                <h5>CT & PT Services</h5>
+                <p class="text-muted">
+                    Current Transformer and Potential Transformer
+                    related electrical testing and services.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="service-card text-center">
+                <div class="service-icon">🔧</div>
+                <h5>Complete Starter</h5>
+                <p class="text-muted">
+                    Complete electrical starter solutions,
+                    installation, maintenance and servicing.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="service-card text-center">
+                <div class="service-icon">🏭</div>
+                <h5>Distribution Panels</h5>
+                <p class="text-muted">
+                    Commercial LT switchgear, electrical
+                    distribution panels and control systems.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="service-card text-center">
+                <div class="service-icon">💡</div>
+                <h5>Smart Automation</h5>
+                <p class="text-muted">
+                    Industrial automation and energy-efficient
+                    electrical system integration.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- TEAM SECTION -->
+<section class="about-section py-5" id="team">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title">Meet Our Leadership Team</h2>
+            <p class="text-muted">
+                The people behind Super Core Electric Co.
+            </p>
+        </div>
+
+        <div class="row justify-content-center g-4">
+
+            <!-- FOUNDER -->
+            <div class="col-md-4 col-sm-6">
+                <div class="team-card">
+                    <div class="service-icon">👨‍💼</div>
+
+                    <h5>Ankit Anand</h5>
+
+                    <p class="team-role">
+                        Founder
+                    </p>
+
+                    <p class="text-muted small">
+                        Leading the company with a vision
+                        for professional electrical engineering
+                        solutions and business growth.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="p-3">
-                    <div class="icon-banner">🎛️</div>
-                    <h4 class="fw-bold">Distribution Panels</h4>
-                    <p class="text-muted">Custom commercial LT switchgear control panels engineered to strict safety, performance, and durability standards.</p>
+
+            <!-- CO-FOUNDER -->
+            <div class="col-md-4 col-sm-6">
+                <div class="team-card">
+                    <div class="service-icon">👩‍💼</div>
+
+                    <h5>Supriya Kumari</h5>
+
+                    <p class="team-role">
+                        Co-Founder
+                    </p>
+
+                    <p class="text-muted small">
+                        Supporting company development,
+                        management and organizational growth.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="p-3">
-                    <div class="icon-banner">💡</div>
-                    <h4 class="fw-bold">Smart Automation</h4>
-                    <p class="text-muted">Cutting-edge system integration for maximizing energy efficiency in modern smart facilities and industrial environments.</p>
+
+            <!-- MARKETING -->
+            <div class="col-md-4 col-sm-6">
+                <div class="team-card">
+                    <div class="service-icon">📈</div>
+
+                    <h5>Ashish Anand</h5>
+
+                    <p class="team-role">
+                        Marketing & Business Development
+                    </p>
+
+                    <p class="text-muted small">
+                        Managing marketing activities,
+                        client relationships and business development.
+                    </p>
                 </div>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Employee / Team Roster Section -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-3 fw-bold">Meet Our Expert Team</h2>
-            <p class="text-center text-muted mb-5">Our certified professionals ensure your engineering layouts comply with international safety standards.</p>
-            
-            <div class="row justify-content-center g-4">
-                <!-- Employee 1 -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="team-card bg-white">
-                        <h5 class="fw-bold mb-1">Amit Sharma</h5>
-                        <p class="text-primary small mb-0 fw-semibold">Chief Electrical Engineer</p>
-                    </div>
-                </div>
 
-                <!-- Employee 2 -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="team-card bg-white">
-                        <h5 class="fw-bold mb-1">Rohan Verma</h5>
-                        <p class="text-primary small mb-0 fw-semibold">Senior Panel Specialist</p>
-                    </div>
-                </div>
+<!-- CONTACT SECTION -->
+<section class="container py-5 text-center" id="contact">
 
-                <!-- Employee 3 -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="team-card bg-white">
-                        <h5 class="fw-bold mb-1">Vikram Kumar</h5>
-                        <p class="text-primary small mb-0 fw-semibold">Safety & Inspection Lead</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <h2 class="section-title mb-3">
+        Contact Super Core Electric Co.
+    </h2>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container my-5 py-5 text-center">
-        <h2 class="fw-bold mb-3">Contact Super Core Electric Co.</h2>
-        <p class="text-muted mb-4">Ready to kickstart your corporate infrastructure project? Connect with our team today.</p>
-        <div class="card p-4 mx-auto shadow-sm" style="max-width: 500px;">
-            <p class="lead mb-1 fw-semibold text-dark">Email Us At:</p>
-            <a href="mailto:contact@supercoreelectric.com" class="text-decoration-none fw-bold fs-5 text-primary">contact@supercoreelectric.com</a>
-        </div>
-    </section>
+    <p class="text-muted mb-4">
+        Looking for professional electrical testing,
+        servicing or industrial engineering solutions?
+        Contact our team today.
+    </p>
 
-    <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Super Core Electric Co. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <div class="card contact-card p-4 shadow-sm">
+
+        <h5 class="fw-bold">Get in Touch</h5>
+
+        <p class="text-muted mb-2">
+            Email Us At:
+        </p>
+
+        <a href="mailto:contact@supercoreelectric.com"
+           class="text-decoration-none fw-bold fs-5">
+            contact@supercoreelectric.com
+        </a>
+
+        <hr>
+
+        <p class="mb-0">
+            <strong>Super Core Electric Co.</strong>
+        </p>
+
+        <p class="text-muted small mb-0">
+            Professional Electrical Engineering Solutions
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="text-center">
+
+    <div class="container">
+
+        <h5 class="fw-bold">
+            ⚡ SUPER CORE ELECTRIC CO.
+        </h5>
+
+        <p class="mb-2">
+            Powering Your Innovation Safely.
+        </p>
+
+        <p class="small mb-0">
+            &copy; 2026 Super Core Electric Co.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
