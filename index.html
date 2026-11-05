@@ -61,12 +61,14 @@
             background: var(--navy);
         }
 
-        /* SVG COMPANY LOGO */
+        /* COMPANY LOGO */
         .brand-logo {
-            width: 55px;
-            height: 55px;
-            flex-shrink: 0;
-            display: block;
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: block;
+    object-fit: contain;
+    background-color: white;
         }
 
         .navbar-brand {
@@ -190,8 +192,8 @@
             }
 
         }
-
     </style>
+
 </head>
 
 <body>
@@ -207,41 +209,14 @@
             <a class="navbar-brand d-flex align-items-center gap-2"
                 href="#home">
 
-                <!-- SUPER CORE ELECTRIC CO. SVG LOGO -->
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 200 200"
-                    width="55"
-                    height="55"
-                    class="brand-logo"
-                    role="img"
-                    aria-label="Super Core Electric Co. Logo">
-
-                    <!-- Left/Bottom Dark Blue Curve -->
-                    <path d="M 100,25
-                             A 75,75 0 0,0 72,165
-                             A 35,35 0 0,1 82,105
-                             A 20,20 0 0,0 60,85
-                             A 55,55 0 0,1 100,45"
-                        fill="#113F67" />
-
-                    <!-- Right/Top Light Blue Curve -->
-                    <path d="M 100,175
-                             A 75,75 0 0,0 128,35
-                             A 35,35 0 0,1 118,95
-                             A 20,20 0 0,0 140,115
-                             A 55,55 0 0,1 100,155"
-                        fill="#14B1E7" />
-
-                    <!-- Central Lightning Bolt -->
-                    <polygon points="115,10 75,100 102,100 85,190 135,90 105,90"
-                        fill="#00C4FF" />
-
-                </svg>
+                <!-- COMPANY LOGO IMAGE -->
+                <img src="./images/logo.jpg"
+                    alt="Super Core Electric Co. Logo"
+                    class="brand-logo">
 
                 <span>SUPER CORE ELECTRIC CO.</span>
 
             </a>
-
 
             <!-- MOBILE MENU BUTTON -->
             <button class="navbar-toggler"
@@ -255,7 +230,6 @@
                 <span class="navbar-toggler-icon"></span>
 
             </button>
-
 
             <!-- NAVIGATION LINKS -->
             <div class="collapse navbar-collapse" id="navbarMenu">
@@ -367,9 +341,7 @@
 
         </div>
 
-
         <div class="row g-4">
-
 
             <!-- INDUSTRIAL WIRING -->
             <div class="col-md-4 col-sm-6">
@@ -503,7 +475,6 @@
 
             </div>
 
-
         </div>
 
     </section>
@@ -529,9 +500,7 @@
 
             </div>
 
-
             <div class="row justify-content-center g-4">
-
 
                 <!-- FOUNDER -->
                 <div class="col-md-4 col-sm-6">
@@ -602,7 +571,6 @@
 
                 </div>
 
-
             </div>
 
         </div>
@@ -625,7 +593,6 @@
             servicing or industrial engineering solutions?
             Contact our team today.
         </p>
-
 
         <div class="card contact-card p-4 shadow-sm">
 
